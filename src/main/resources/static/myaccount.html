@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minha Conta</title>
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+        <link href="./assets/stylesheets/auth.css" rel="stylesheet" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="assets/javascripts/jquery-2.1.0.min.js"></script>
+
+        <script type="text/javascript" src="assets/javascripts/view/myaccount.js"></script>
+    </head>
+
+
+    <body>
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="./assets/images/logo.png"/>
+            </div>
+            <button action="action" onclick="window.history.go(-1); return false;" class="btn btn-default btn-gray" type="button"><i class="fas fa-arrow-left"></i> Voltar</button>
+        </div>
+
+        <div class="account-pane">
+            <h1>Minha Conta</h1>
+
+            <div class="form-pane">
+                <form autocomplete="on">
+                    <div class="avatar-edit">
+                        <div class="avatar-box">
+                            <object id="avatar" type="image/png">
+                                <img src="/auth/assets/images/default-avatar.png"/>
+                            </object>
+                        </div>
+                        <div class="avatar-upload">
+                            <label>Imagem de perfil</label> <div id="gravatarInUse" hidden> (* <a href="http://www.gravatar.com">Gravatar</a>)</div><br>
+                            <div>Add sua <a onclick="chooseFile()">imagem</a></div>
+                            <div id="gravatarOpt" hidden> ou use <a onclick="useGravatar()">Gravatar</a></div><br>
+                            <div class="sm">Tamanho máx. 50kb</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Nome e sobrenome</label>
+                        <input type="text" class="form-control formInput" id="name"/>
+                    </div>
+
+                    <div class="form-group" id="passwordView">
+                        <div class="password-label">
+                            <label for="password">Senha</label>
+                            <a onclick="changePassword()">Alterar</a>
+                        </div>
+                        <input type="password" disabled class="form-control" id="password" value="password"/>
+                    </div>
+
+                    <div class="form-group" id="passwordChangeCurrent" hidden>
+                        <div class="password-label">
+                            <label for="currentPassword">Senha</label>
+                        </div>
+                        <div class="changePassword">
+                            <input type="password" autocomplete="off" class="form-control" id="currentPassword" onchange="passwordCurrentOK()" placeholder="Senha atual"/>
+                            <button type="button" class="btn" onclick="passwordCurrentOK()"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="passwordChangeNew" hidden>
+                        <div class="password-label">
+                            <label for="newPassword">Senha</label>
+                        </div>
+                        <div class="changePassword">
+                            <input type="password" autocomplete="off" class="form-control" id="newPassword" onchange="passwordNewOK()" placeholder="Nova senha"/>
+                            <button type="button" class="btn" onclick="passwordNewOK()"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="passwordChangeNewConfirm" hidden>
+                        <div class="password-label">
+                            <label for="newPasswordConfirm">Senha</label>
+                        </div>
+                        <div class="changePassword">
+                            <input type="password" autocomplete="off" class="form-control" id="newPasswordConfirm" onchange="passwordNewConfirmOK()" placeholder="Confirme Nova senha"/>
+                            <button type="button" class="btn" onclick="passwordNewConfirmOK()"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Cargo</label>
+                        <select class="form-control formInput" id="role"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" class="form-control" id="company" disabled/>
+                    </div>
+
+                </form>
+            </div>
+
+            <button id="btnSubmit" class="btn btn-block" type="submit" onclick="updateUser()" disabled>Alterar</button>
+
+        </div>
+
+        <input id="fileInput" type="file" style="display: none;"/>
+    </body>
+</html>

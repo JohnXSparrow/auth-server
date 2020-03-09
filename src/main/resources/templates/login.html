@@ -1,0 +1,52 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/x-icon" th:href="@{images/favicon.png}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+	<link th:href="@{stylesheets/all.css}" rel="stylesheet">
+</head>
+
+<body class="login">
+	<div class="wrapper">
+		<form class="form-signin" th:action="@{/login}" method="POST">
+			<img class="logo" th:src="@{images/logo.png}">
+
+			<div id="error-warning-credentials" hidden class="text-danger text-center">E-mail ou senha incorreta.</div>
+			<div id="error-warning-enabled" hidden class="text-danger text-center">Conta não está ativa.</div>
+			<br>
+
+			<label>
+				E-mail<br>
+				<input type="text" class="form-control" name="username" placeholder="Digite seu E-mail">
+			</label>
+
+			<label>
+				Senha<br>
+				<input type="password" class="form-control" name="password" placeholder="Digite sua senha">
+			</label>
+
+			<button class="btn btn-block" type="submit">Conectar</button>
+		</form>
+	</div>
+	
+	<script type="text/javascript" th:src="@{javascripts/project.js}"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://use.fontawesome.com/8b7a2454e2.js"></script>
+	<script type="text/javascript">
+		if (window.location.href.match('\\?Bad%20credentials')) {
+		 	document.querySelector('#error-warning-credentials').hidden = false;
+		}		
+		if (window.location.href.match('\\?Account%20disabled')) {
+			document.querySelector('#error-warning-enabled').hidden = false;
+		}
+	</script>
+</body>
+</html>

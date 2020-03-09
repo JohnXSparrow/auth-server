@@ -1,0 +1,234 @@
+/*** Base ***/
+body {
+   font-family: "Titillium Web", sans-serif;
+   padding-bottom: 50px;
+   background-color: #f9fafc;
+}
+body h1 {
+   font-size: 18px;
+   color: #6a8093;
+   margin: 0 0 20px 10px;
+}
+
+a {
+    color: #ef7c4c;
+    cursor: default;
+}
+a:hover {
+    color: #ef7c4c;
+}
+
+input[type="password"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder {
+   font-size: 14px;
+   font-weight: 600;
+   color: #95adc3
+}
+
+input[type="password"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder {
+   font-size: 14px;
+   font-weight: 600;
+   color: #95adc3
+}
+
+input[type="password"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder {
+   font-size: 14px;
+   font-weight: 600;
+   color: #95adc3
+}
+
+/*** Forms ***/
+.updatepw-pane {
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-inputs {
+    background-color: #ffffff;
+    border: solid 1px #eeeff5;
+    padding: 70px 120px;
+}
+
+.formMsgBlock {
+    float: left;
+    margin: 16px 0;
+    color:
+}
+
+.updatepw-pane form button[type=submit] {
+       float: right;
+       width: 120px;
+       height: 40px;
+       border-radius: 3px;
+       color: #fff;
+       background-color: #ef7c4c;
+       margin: 16px 0;
+}
+
+.form-pane form {
+    margin: 70px 120px;
+}
+
+.form-pane {
+   background-color: #ffffff;
+   border: solid 1px #eeeff5;
+}
+
+
+.form-control {
+   width: 100%;
+   height: 40px;
+   border-radius: 2px;
+   background: #ffffff;
+   border: solid 1px #95adc3;
+   box-shadow: none;
+   font-size: 14px;
+   font-weight: 600;
+   color: #363842;
+   margin-top: 5px
+}
+
+.btn-gray {
+   font-size: 14px;
+   font-weight: 600;
+   color: #fff;
+   border-radius: 3px;
+   background: #95adc3;
+}
+.btn-gray:hover {
+   color: #fff;
+   background: rgba(149, 173, 195, 0.8)
+}
+
+/*** Bootstrap changes ***/
+.form-control:focus {
+   outline: 0;
+   box-shadow: none;
+   border: solid 1px #ef7c4c
+}
+.form-control {
+   outline: 0;
+   box-shadow: none;
+   border: solid 1px #cbcfe3
+}
+
+
+
+
+
+body .navbar {
+    height: 80px;
+    background-color: #ffffff;
+    border: solid 1px #eeeff5;
+}
+
+body .navbar .btn {
+   float: right;
+   margin: 20px 34px;
+   width: 97px;
+   height: 40px;
+}
+
+body .navbar .logo {
+   float: left;
+   margin: 24px 40px;
+   width: 120px;
+   height: 32px;
+   padding: 0px;
+}
+
+
+
+
+div.account-pane {
+    max-width: 500px;
+    margin: 40px auto;
+}
+.account-pane button[type="submit"] {
+   float: right;
+   width: 120px;
+   height: 40px;
+   border-radius: 3px;
+   color: #fff;
+   background-color: #ef7c4c;
+   margin: 16px 0;
+}
+
+
+
+
+.avatar-edit {
+    width: 100%;
+    margin: 0 0 26px 0;
+}
+.avatar-edit div {
+    display: inline-block;
+}
+.avatar-edit .avatar-upload {
+    padding: 0 0 0 16px;
+}
+.avatar-upload div {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  color: #95adc3;
+  margin: 0;
+}
+.avatar-upload div.sm {
+  font-size: 12px;
+  font-weight: inherit;
+  text-align: left;
+  color: #95adc3;
+}
+.avatar-edit .avatar-box {
+   width: 53px;
+   height: 53px;
+   background-color: #ffffff;
+   padding: 0px;
+   float: left;
+   margin: 5px 0;
+}
+.avatar-edit .avatar-box * {
+   width: 100%;
+   height: 100%;
+   border-radius: 6px;
+}
+#gravatarInUse {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.password-label * {
+    display: inline-block;
+}
+.password-label a {
+    float:right;
+    color: #95adc3;
+}
+
+.changePassword * {
+    display: inline-block;
+    height: 40px;
+
+}
+
+.changePassword input[type="password"] {
+    width: 210px;
+}
+
+.changePassword button {
+    width: 40px;
+    padding: 0;
+    margin: 5px 0 0 0;
+    float: right;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #ef7c4c;
+}
+
+.changePassword button:hover {
+    color: #fff;
+}
+

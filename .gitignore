@@ -1,0 +1,17 @@
+# InteliJ
+*.iml
+.idea/
+
+# Binaries
+target/
+
+# VI temporaries
+.*.swp
+*~
+
+# VS Code
+.classpath
+.factorypath
+.project
+.settings/
+
